@@ -6,12 +6,12 @@ export class Http {
     constructor() { }
 
     /**
-     * @param hostname  - example: catfact.ninja
-     * @param path  - example: /fact
+     * @param hostname - example: catfact.ninja
+     * @param path - example: /fact
      * @param options 
      * @returns 
      */
-    async httpRequest(
+    async request(
         hostname: string,
         path: string = "",
         options?: HttpRequestOptions
