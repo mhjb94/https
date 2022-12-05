@@ -13,7 +13,7 @@ export class Http {
      * @param options 
      * @returns 
      */
-    async request(
+    async httpRequest(
         hostname: string,
         path: string = "",
         options?: HttpRequestOptions

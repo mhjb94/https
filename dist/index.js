@@ -8,12 +8,14 @@ const https_1 = __importDefault(require("https"));
 class Http {
     constructor() { }
     /**
+     * https request
+     *
      * @param hostname - example: catfact.ninja
      * @param path - example: /fact
      * @param options
      * @returns
      */
-    async request(hostname, path = "", options) {
+    async httpRequest(hostname, path = "", options) {
         // remove https:// OR http:// from hostname
         if (hostname.startsWith("https://")) {
             hostname = hostname.replace("https://", "");
