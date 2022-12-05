@@ -3,6 +3,19 @@ Pure https request (like `fetch` or `axios`) that uses node:https that written i
 ### Install
 `npm install @mhjb/https`
 
+### Supported Protocols
+```
+GET
+POST
+PUT
+DELETE
+OPTIONS
+PATCH
+COPY
+```
+and others
+
+
 ### Example
 ```js
 import { Http } from "@mhjb/https"
@@ -10,7 +23,7 @@ import { Http } from "@mhjb/https"
 Run()
 async function Run {
     let http = new Http()
-    let req = await http.request("example.com", "/path")
+    let req = await http.request("https://example.com/path?something=true")
 
     let data = req.data
     let statusCode = req.statusCode
@@ -24,7 +37,7 @@ OR
 const { Http } = require("@mhjb/https")
 
 let http = new Http()
-http.request("example.com", "/path").then(req => {
+http.request("https://example.com/path?something=true").then(req => {
     
     let data = req.data
     let statusCode = req.statusCode
