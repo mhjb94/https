@@ -3,7 +3,7 @@ import {
     Criteria,
     HttpRequestOptions,
     HttpRequestResult,
-} from "./types/index"
+} from "./types/http"
 
 export class Http {
 
