@@ -6,6 +6,8 @@ export class Http {
     constructor() { }
 
     /**
+     * https request
+     * 
      * @param hostname - example: catfact.ninja
      * @param path - example: /fact
      * @param options 
