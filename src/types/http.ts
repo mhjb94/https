@@ -1,7 +1,7 @@
 import { OutgoingHttpHeaders } from "http"
 
 export interface HttpRequestOptions {
-    method?: "GET" | "POST" |  "PUT" |  "DELETE" | "OPTIONS"
+    method?: "GET" | "POST" |  "PUT" |  "DELETE" | "OPTIONS" | "PATCH" | "COPY"
     headers?: OutgoingHttpHeaders
     body?: string
 }
