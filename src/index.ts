@@ -6,9 +6,10 @@ export class Http {
     constructor() { }
 
     /**
-     * @param hostname - example: catfact.ninja
-     * @param path - example: /fact
-     * @param options
+     * @param hostname  - example: catfact.ninja
+     * @param path  - example: /fact
+     * @param options 
+     * @returns 
      */
     async httpRequest(
         hostname: string,
@@ -45,7 +46,7 @@ export class Http {
 
             const req = https.request({ ...criteria }, (res) => {
 
-                let resBuffer: Buffer[]
+                let resBuffer: Buffer[] = []
                 let data: JSON | Buffer | string
 
                 res.on('data', (chunk: Buffer) => {
@@ -66,7 +67,7 @@ export class Http {
                         }
 
                         resolve({
-                            body: data,
+                            data,
                             statusCode: res.statusCode,
                             statusMessage: res.statusMessage,
                             headers: res.headers,

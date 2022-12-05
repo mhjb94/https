@@ -14,7 +14,7 @@ export interface Criteria {
 }
 
 export interface HttpRequestResult {
-    body: Buffer | string | JSON
+    data: Buffer | string | JSON
     statusCode?: number
     statusMessage?: string
     headers: object
