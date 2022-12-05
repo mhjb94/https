@@ -24,16 +24,9 @@ export class Http {
         let parseURL = new URL(url)
         
         let criteria: Criteria = {
-            hash: parseURL.hash,
-            host: parseURL.host,
-            href: parseURL.href,
             hostname: parseURL.hostname,
-            origin: parseURL.origin,
-            username: parseURL.username,
-            password: parseURL.password,
-            pathname: parseURL.pathname,
-            port: parseURL.port,
-            protocol: parseURL.protocol,
+            path: parseURL.pathname,
+            hash: parseURL.hash,
             search: parseURL.search,
         }
 

@@ -10,17 +10,10 @@ export interface Criteria {
     headers?: OutgoingHttpHeaders
     method?: string
 
-    hash: string
-    host: string
-    href: string
     hostname: string
-    origin: string
-    username: string
-    password: string
-    pathname: string
-    port: string
-    protocol: string
+    path: string // its pathname in new URL
     search: string
+    hash: string
 }
 
 export interface HttpRequestResult {
