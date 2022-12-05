@@ -1,5 +1,9 @@
 import https from "https"
-import { HttpRequestOptions, Criteria, HttpRequestResult } from "./types/index"
+import {
+    Criteria,
+    HttpRequestOptions,
+    HttpRequestResult,
+} from "./types/index"
 
 export class Http {
 
