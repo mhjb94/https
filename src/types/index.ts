@@ -12,3 +12,10 @@ export interface Criteria {
     headers?: OutgoingHttpHeaders
     method?: string
 }
+
+export interface HttpRequestResult {
+    body: Buffer | string | JSON
+    statusCode?: number
+    statusMessage?: string
+    headers: object
+}

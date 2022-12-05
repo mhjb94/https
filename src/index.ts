@@ -1,5 +1,5 @@
 import https from "https"
-import { HttpRequestOptions, Criteria } from "./types/index"
+import { HttpRequestOptions, Criteria, HttpRequestResult } from "./types/index"
 
 export class Http {
 
@@ -14,7 +14,7 @@ export class Http {
         hostname: string,
         path: string = "",
         options?: HttpRequestOptions
-    ): Promise<any> {
+    ): Promise<HttpRequestResult> {
 
         // remove https:// OR http:// from hostname
         if (hostname.startsWith("https://")) {
