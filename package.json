@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "tsc",
     "dist": "node ./dist/index.js",
