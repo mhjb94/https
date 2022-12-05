@@ -3,7 +3,7 @@ Pure https request (like `fetch` or `axios`) that uses node:https that written i
 ### Install
 `npm install @mhjb/https`
 
-### Supported Protocols
+### Supported Methods
 ```
 GET
 POST
