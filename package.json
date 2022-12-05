@@ -1,6 +1,6 @@
 {
   "name": "@mhjb/https",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "type": "commonjs",
   "types": "./dist/index.d.ts",
