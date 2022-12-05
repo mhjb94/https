@@ -17,7 +17,7 @@ export class Http {
      * @param options 
      * @returns 
      */
-    async httpRequest(
+    async request(
         hostname: string,
         path: string = "",
         options?: HttpRequestOptions

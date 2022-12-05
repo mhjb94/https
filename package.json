@@ -3,6 +3,7 @@
   "version": "1.0.5",
   "description": "",
   "type": "commonjs",
+  "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsc",

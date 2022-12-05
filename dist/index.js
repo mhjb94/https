@@ -15,7 +15,7 @@ class Http {
      * @param options
      * @returns
      */
-    async httpRequest(hostname, path = "", options) {
+    async request(hostname, path = "", options) {
         // remove https:// OR http:// from hostname
         if (hostname.startsWith("https://")) {
             hostname = hostname.replace("https://", "");
