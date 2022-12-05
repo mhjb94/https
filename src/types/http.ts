@@ -7,10 +7,20 @@ export interface HttpRequestOptions {
 }
 
 export interface Criteria {
-    hostname: string
-    path?: string
     headers?: OutgoingHttpHeaders
     method?: string
+
+    hash: string
+    host: string
+    href: string
+    hostname: string
+    origin: string
+    username: string
+    password: string
+    pathname: string
+    port: string
+    protocol: string
+    search: string
 }
 
 export interface HttpRequestResult {

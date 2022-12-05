@@ -12,30 +12,29 @@ export class Http {
     /**
      * https request
      * 
-     * @param hostname - example: catfact.ninja
-     * @param path - example: /fact
+     * @param url - example: https://example.com/path?something=true
      * @param options 
      * @returns 
      */
     async request(
-        hostname: string,
-        path: string = "",
+        url: string,
         options?: HttpRequestOptions
     ): Promise<HttpRequestResult> {
 
-        // remove https:// OR http:// from hostname
-        if (hostname.startsWith("https://")) {
-            hostname = hostname.replace("https://", "")
-        } else if (hostname.startsWith("http://")) {
-            hostname = hostname.replace("http://", "")
-        }
-
+        let parseURL = new URL(url)
+        
         let criteria: Criteria = {
-            hostname: hostname
-        }
-
-        if (path) {
-            criteria.path = path
+            hash: parseURL.hash,
+            host: parseURL.host,
+            href: parseURL.href,
+            hostname: parseURL.hostname,
+            origin: parseURL.origin,
+            username: parseURL.username,
+            password: parseURL.password,
+            pathname: parseURL.pathname,
+            port: parseURL.port,
+            protocol: parseURL.protocol,
+            search: parseURL.search,
         }
 
         if (options?.headers) {
@@ -44,10 +43,8 @@ export class Http {
 
         if (options?.method) {
             criteria.method = options.method
-        } else {
-            criteria.method = "GET"
         }
-
+        
         return new Promise((resolve, reject) => {
 
             const req = https.request({ ...criteria }, (res) => {
